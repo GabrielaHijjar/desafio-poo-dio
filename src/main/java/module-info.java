@@ -3,6 +3,6 @@ module com.example.desafiodiopoo {
     requires javafx.fxml;
 
 
-    opens com.example.desafiodiopoo to javafx.fxml;
-    exports com.example.desafiodiopoo;
+    opens com.example.desafiodiopoo.dominio to javafx.fxml;
+    exports com.example.desafiodiopoo.dominio;
 }
