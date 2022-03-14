@@ -1,10 +1,15 @@
 package com.example.desafiodiopoo.dominio;
 
-public class Curso {
+public class Curso extends Conteudo {
    private String titulo;
    private String descricao;
    private int cargahoraria;
 
+
+    @Override
+    public double calcularXP() {
+        return XP_PADRAO * cargahoraria;
+    }
 
     public String getTitulo() {
         return titulo;
@@ -34,8 +39,8 @@ public class Curso {
     @Override
     public String toString() {
         return "Curso{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao()+ '\'' +
                 ", cargahoraria=" + cargahoraria +
                 '}';
     }

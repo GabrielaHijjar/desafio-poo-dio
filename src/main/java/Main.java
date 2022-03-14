@@ -1,5 +1,4 @@
-import com.example.desafiodiopoo.dominio.Curso;
-import com.example.desafiodiopoo.dominio.Mentoria;
+import com.example.desafiodiopoo.dominio.*;
 
 import java.time.LocalDate;
 
@@ -27,6 +26,27 @@ mentoria.setData(LocalDate.now());
 
 System.out.println(mentoria);
 
+        Bootcamp bootcamp = new Bootcamp();
+        bootcamp.setNome("Bootcamp Java Developer");
+        bootcamp.setDescricao("Descrição do bootcamp");
+bootcamp.getConteudos().add(curso1);
+        bootcamp.getConteudos().add(curso2);
+        bootcamp.getConteudos().add(mentoria);
+
+        Dev devGabriela = new Dev();
+        devGabriela.setNome("Gabriela");
+        devGabriela.inscreverBootcamp(bootcamp);
+        System.out.println("Conteudos incritos Gabriela" + devGabriela.getConteudosInscritos());
+      devGabriela.progredir();
+      System.out.println("Conteudos concluidos Gabriela" + devGabriela.getConteudosConcluidos());
+
+
+      Dev devCarlos = new Dev();
+        devCarlos.setNome("Carlos");
+        devCarlos.inscreverBootcamp(bootcamp);
+        devCarlos.progredir();
+        System.out.println("Conteudos incritos Carlos" + devCarlos.getConteudosInscritos());
+        System.out.println("Conteudos concluidos Carlos" + devCarlos.getConteudosConcluidos());
 
     }
 }
